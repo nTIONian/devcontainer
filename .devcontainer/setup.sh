@@ -20,9 +20,3 @@ sed -i 's/#PermitTunnel no/PermitTunnel yes/g' /etc/ssh/sshd_config
 sed -i -E "s/#?\s*UsePAM\s+.+/UsePAM yes/g" /etc/ssh/sshd_config
 rc-status
 service sshd start
-
-echo "Creating a user"
-
-NEWUSER="dev"
-adduser -D $NEWUSER
-echo "$NEWUSER ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/$NEWUSER && chmod 0440 /etc/sudoers.d/$NEWUSER
