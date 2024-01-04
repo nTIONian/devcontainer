@@ -5,7 +5,7 @@ WORKDIR /devcontainer
 COPY . .
 
 RUN chmod +x setup.sh
-RUN sudo chmod +x user-setup.sh
+RUN chmod +x user-setup.sh
 
 RUN ./setup.sh
 
