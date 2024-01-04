@@ -6,7 +6,7 @@ echo "Running setup.sh"
 echo "Installing basic packages"
 
 apk --no-cache update
-apk --no-cache add openrc sudo gcc git curl htop go python3 make nodejs postgresql-client openssh-server-pam neovim ripgrep fd lazygit bash unzip wget gzip shadow
+apk --no-cache add openrc sudo build-base git curl htop go python3 make nodejs postgresql-client openssh-server-pam neovim ripgrep fd lazygit bash unzip wget gzip shadow
 
 echo "Setting up ssh server"
 
